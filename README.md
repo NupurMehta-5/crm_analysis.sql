@@ -58,10 +58,11 @@ SQL techniques demonstrated:
 
 ## 📈 Key Business Insights
 
-- Higher lead scores are associated with higher conversion probability.
-- Faster response times significantly improve conversion outcomes.
-- Referral and LinkedIn channels show stronger performance compared to cold outreach.
-- Revenue concentration varies by industry.
+- Leads with higher LeadScore (>70) show significantly higher conversion probability
+- Average response time for converted leads is lower, indicating speed is critical in sales
+- Referral and LinkedIn channels outperform cold outreach, suggesting higher intent leads
+- Certain industries (e.g., IT/Finance) generate higher revenue per conversion
+- A small subset of leads contributes to a large portion of total revenue (Pareto effect)
 
 ---
 
