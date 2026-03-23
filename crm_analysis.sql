@@ -51,7 +51,10 @@ ORDER BY Conversion_Rate_Percentage DESC;
 
 -- 5️ Average Lead Score (Converted vs Not Converted)
 SELECT 
-    Converted,
+    CASE 
+        WHEN Converted = 1 THEN 'Converted'
+        ELSE 'Not Converted'
+    END AS Conversion_Status,
     AVG(LeadScore) AS Avg_LeadScore
 FROM crm_leads
 GROUP BY Converted;
@@ -60,7 +63,10 @@ GROUP BY Converted;
 
 -- 6️ Average Response Time (Converted vs Not Converted)
 SELECT 
-    Converted,
+    CASE 
+        WHEN Converted = 1 THEN 'Converted'
+        ELSE 'Not Converted'
+    END AS Conversion_Status,
     AVG(ResponseTimeHours) AS Avg_Response_Time
 FROM crm_leads
 GROUP BY Converted;
@@ -69,6 +75,6 @@ GROUP BY Converted;
 
 -- 7️ Total Revenue Generated (Converted Leads Only)
 SELECT 
-    SUM(DealValue) AS Total_Revenue
+    SUM(ISNULL(DealValue, 0)) AS Total_Revenue
 FROM crm_leads
 WHERE Converted = 1;
